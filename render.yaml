@@ -3,7 +3,7 @@ services:
     name: neurosight
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn neurosight_app_with_auth:app
+    startCommand: gunicorn neurosight_app_with_auth:app -c gunicorn.conf.py
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.0
